@@ -41,13 +41,13 @@ export default function Home() {
 
 				<div className='hidden gap-6 md:flex'>
 					<Link href='#'>
-						<a>About</a>
+						<a className='hover:underline'>About</a>
 					</Link>
 					<Link href='#'>
-						<a>Blog</a>
+						<a className='hover:underline'>Blog</a>
 					</Link>
 					<Link href='#'>
-						<a>Contact</a>
+						<a className='hover:underline'>Contact</a>
 					</Link>
 				</div>
 
@@ -85,8 +85,8 @@ export default function Home() {
 							objectFit='cover'
 						/>
 					</div>
-					<div className='absolute top-0 left-0 bg-gray-900 bg-opacity-50 w-screen h-screen'></div>
-					<div className='absolute flex flex-col mt-8 mx-auto my-auto gap-10 text-center items-center text-white'>
+					<div className='absolute top-0 left-0 bg-gray-900 bg-opacity-30 w-screen h-screen'></div>
+					<div className='absolute flex flex-col mt-8 mx-auto my-auto gap-14 text-center items-center text-white'>
 						<h1 className='text-5xl mx-4'>Find Your Next Unique Stay</h1>
 						<button className='bg-green-800 px-9 py-5 rounded hover:bg-opacity-80'>
 							<Link href='#'>
