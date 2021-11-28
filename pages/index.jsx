@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 
-import heroImage from '../public/images/284466.jpg'
+import heroImage from '../public/images/DJI_0723.webp'
 
 import Head from 'next/head'
 import Link from 'next/link'
@@ -34,7 +34,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<nav className='flex justify-between mt-4 z-10 text-white text-xl'>
+			<nav className='flex justify-between mt-8 z-10 text-white text-xl'>
 				<Link href='/'>
 					<a>RAFISOE</a>
 				</Link>
@@ -85,10 +85,10 @@ export default function Home() {
 							objectFit='cover'
 						/>
 					</div>
-					<div className='absolute top-0 left-0 bg-gray-900 bg-opacity-30 w-screen h-screen'></div>
-					<div className='absolute flex flex-col mt-8 mx-auto my-auto gap-14 text-center items-center text-white fade-up'>
+					<div className='absolute top-0 left-0 bg-gray-900 bg-opacity-20 w-screen h-screen'></div>
+					<div className='absolute flex flex-col mt-36 mx-auto my-auto gap-14 text-center items-center text-white fade-up'>
 						<h1 className='text-5xl mx-4'>Find Your Next Unique Stay</h1>
-						<button className='bg-green-800 px-9 py-5 rounded hover:bg-opacity-80'>
+						<button className='bg-gray-700 px-9 py-5 rounded hover:bg-opacity-80'>
 							<Link href='#'>
 								<a>Watch Now</a>
 							</Link>
