@@ -1,6 +1,10 @@
+import { useState, useEffect, useCallback } from 'react'
+
+import heroImage from '../public/images/284466.jpg'
+
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState, useEffect, useCallback } from 'react'
+import Image from 'next/image'
 
 export default function Home() {
 	const [isMobileNavDisplayed, setIsMobileNavDisplayed] = useState(() => false)
@@ -26,22 +30,23 @@ export default function Home() {
 	return (
 		<div className='container flex flex-col min-h-screen mx-auto py-2 px-4 '>
 			<Head>
-				<title>Create Next App</title>
+				<title>RAFISOE 👋🏿</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<nav className='flex justify-between mt-4 z-10'>
+
+			<nav className='flex justify-between mt-4 z-10 text-white text-xl'>
 				<Link href='/'>
 					<a>RAFISOE</a>
 				</Link>
 
 				<div className='hidden gap-6 md:flex'>
-					<Link href='/About'>
+					<Link href='#'>
 						<a>About</a>
 					</Link>
-					<Link href='/Blog'>
+					<Link href='#'>
 						<a>Blog</a>
 					</Link>
-					<Link href='/Contact'>
+					<Link href='#'>
 						<a>Contact</a>
 					</Link>
 				</div>
@@ -52,10 +57,10 @@ export default function Home() {
 				<div
 					className={`${
 						isMobileNavDisplayed ? 'block' : 'hidden'
-					} flex flex-col items-center justify-center w-full flex-1  text-center absolute bg-gray-700 top-0 left-0 min-h-screen opacity-70 cursor-pointer text-white text-xl`}
+					} flex flex-col items-center justify-center w-full flex-1  text-center absolute bg-gray-900 bg-opacity-90 top-0 left-0 min-h-screen  cursor-pointer text-white text-xl`}
 					onClick={mobileNavClose}>
 					<div
-						className='relative flex flex-col items-center justify-center p-14 gap-3 bg-black rounded z-10 pointer-events-auto cursor-default'
+						className='relative flex flex-col items-center justify-center p-24 gap-8 bg-green-900 rounded pointer-events-auto cursor-default z-20'
 						onClick={stopBubbling}>
 						<Link href='/About'>
 							<a>About</a>
@@ -69,6 +74,28 @@ export default function Home() {
 					</div>
 				</div>
 			</nav>
+			<div>
+				<div className='absolute top-0 left-0 flex flex-col items-center justify-center flex-1 text-center object-cover'>
+					<div className='relative w-screen h-screen'>
+						<Image
+							src={heroImage}
+							layout='fill'
+							alt='Hero Image'
+							placeholder='blur'
+							objectFit='cover'
+						/>
+					</div>
+					<div className='absolute top-0 left-0 bg-gray-900 bg-opacity-50 w-screen h-screen'></div>
+					<div className='absolute flex flex-col mt-8 mx-auto my-auto gap-10 text-center items-center text-white'>
+						<h1 className='text-5xl mx-4'>Find Your Next Unique Stay</h1>
+						<button className='bg-green-800 px-9 py-5 rounded hover:bg-opacity-80'>
+							<Link href='#'>
+								<a>Watch Now</a>
+							</Link>
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }
